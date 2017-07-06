@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Security.Claims;
@@ -47,7 +48,8 @@ namespace TaskListApi.Modules
                 var authTuple = AuthService.IsValidCredentials(name, password);
 
                 if (authTuple.Item1 && authTuple.Item2 != null)
-                {                    
+                {
+                    Trace.TraceInformation(authTuple.Item2.username + " signed in.");
                     var identity = new GenericIdentity(authTuple.Item2.id.ToString());
                     SetPrincipal(new GenericPrincipal(identity, null));
                 }

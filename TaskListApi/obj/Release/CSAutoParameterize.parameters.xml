@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MySql-Web.config Connection String" description="MySql Connection String used in web.config by the application to access the database." defaultValue="Server=todo-list.mysql.database.azure.com; Port=3306; Database=todo_list; Uid=user@todo-list; Pwd=P@ssword; SslMode=Preferred;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\TaskListApi\\TaskListApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MySql']/@connectionString" />
+  </parameter>
+</parameters>
